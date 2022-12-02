@@ -7,3 +7,6 @@ Calculating the [calories of elves snacks](https://adventofcode.com/2022/day/1).
 
 ## Day 2
 Calculting my total score in a [scissors, paper, rock competition](https://adventofcode.com/2022/day/2).
+
+## Day 3
+TBA
