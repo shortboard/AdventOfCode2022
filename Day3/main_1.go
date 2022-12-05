@@ -1,4 +1,4 @@
-package main
+package main_1
 
 import (
 	"bufio"
@@ -16,16 +16,16 @@ func main() {
 	scanner := bufio.NewScanner(file)
 
 	sum := 0
-	group := []string{}
 	for scanner.Scan() {
-		group = append(group, scanner.Text())
+		text := scanner.Text()
+		firstHalf := text[:len(text)/2]
+		secondHalf := text[len(text)/2:]
 
-		if len(group) == 3 {
-			firstTwo := findCommonCharacters(group[0], group[1])
-			character := findCommonCharacters(firstTwo, group[2])
-			sum += int(calcultePriority(character[0]))
-			group = []string{}
-		}
+		commonCharacter := findCommonCharacterPriority(firstHalf, secondHalf)
+
+		sum += int(commonCharacter)
+
+		println(commonCharacter)
 	}
 
 	println(sum)
